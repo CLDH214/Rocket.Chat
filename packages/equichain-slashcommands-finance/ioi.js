@@ -1,3 +1,5 @@
+import toastr from 'toastr';
+
 /*
  * Ioi is a named function that is Indication of Interest of certain financial products
  * @param {Object} message - The message object
