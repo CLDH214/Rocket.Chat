@@ -38,6 +38,36 @@ Meteor.startup(function() {
 			});
 		}
 
+		if (!RocketChat.models.Users.db.findOneById('eqc.exchange')) {
+			RocketChat.models.Users.create({
+				_id: 'eqc.exchange',
+				name: 'EquiChain.Exchange',
+				username: 'eqc.exchange',
+				status: 'online',
+				statusDefault: 'online',
+				utcOffset: 0,
+				active: true,
+				type: 'bot'
+			});
+
+			RocketChat.authz.addUserRoles('eqc.exchange', 'bot');
+
+			const rs = RocketChatFile.bufferToStream(new Buffer(Assets.getBinary('avatars/logo.png'), 'utf8'));
+			const fileStore = FileUpload.getStore('Avatars');
+			fileStore.deleteByName('eqc.exchange');
+
+			const file = {
+				userId: 'eqc.exchange',
+				type: 'image/png'
+			};
+
+			Meteor.runAsUser('eqc.exchange', () => {
+				fileStore.insert(file, rs, () => {
+					return RocketChat.models.Users.setAvatarOrigin('eqc.exchange', 'local');
+				});
+			});
+		}
+
 		if (process.env.ADMIN_PASS) {
 			if (_.isEmpty(RocketChat.authz.getUsersInRole('admin').fetch())) {
 				console.log('Inserting admin user:'.green);

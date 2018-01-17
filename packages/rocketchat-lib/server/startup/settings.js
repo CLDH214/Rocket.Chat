@@ -590,7 +590,7 @@ RocketChat.settings.addGroup('General', function() {
 		i18nDescription: 'Site_Url_Description',
 		'public': true
 	});
-	this.add('Site_Name', 'Rocket.Chat', {
+	this.add('Site_Name', 'EquiChain.Chat', {
 		type: 'string',
 		'public': true
 	});
@@ -1444,7 +1444,7 @@ RocketChat.settings.addGroup('Layout', function() {
 			type: 'string',
 			'public': true
 		});
-		this.add('Layout_Home_Body', 'Welcome to Rocket.Chat <br> Go to APP SETTINGS -> Layout to customize this intro.', {
+		this.add('Layout_Home_Body', 'Welcome to EquiChain.Chat <br> Go to APP SETTINGS -> Layout to customize this intro.', {
 			type: 'code',
 			code: 'text/html',
 			multiline: true,
