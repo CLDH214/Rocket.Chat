@@ -60,7 +60,7 @@
 		"chat"
 	],
 	"scripts": {
-		"start": "meteor npm i && meteor -p 3033",
+		"start": "meteor reset && meteor npm i && meteor -p 3033",
 		"lint": "eslint .",
 		"lint-fix": "eslint . --fix",
 		"stylelint": "stylelint packages/**/*.css",
