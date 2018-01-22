@@ -64,7 +64,7 @@ RocketChat.settings.get('Assets_SvgFavicon_Enable', (key, value) => {
 	if (value) {
 		Inject.rawHead(key,
 			`${ standardFavicons }
-			<link rel="icon" sizes="any" type="image/svg+xml" href="assets/favicon.svg" />`);
+			<link rel="icon" sizes="any" type="image/svg+xml" href="assets/favicon.ico" />`);
 	} else {
 		Inject.rawHead(key, standardFavicons);
 	}

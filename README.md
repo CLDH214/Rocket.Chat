@@ -1,4 +1,4 @@
-![Rocket.Chat logo](https://rocket.chat/images/logo/logo-dark.svg?v3)
+![Rocket.Chat logo](https://rocket.chat/images/logo/EquiChain_Logo.png?v3)
 
 # The Ultimate Open Source WebChat Platform
 

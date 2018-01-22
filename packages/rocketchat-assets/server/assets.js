@@ -16,7 +16,7 @@ this.RocketChatAssetsInstance = RocketChatAssetsInstance;
 const assets = {
 	logo: {
 		label: 'logo (svg, png, jpg)',
-		defaultUrl: 'images/logo/logo.svg',
+		defaultUrl: 'images/logo/EquiChain_Logo.png',
 		constraints: {
 			type: 'image',
 			extensions: ['svg', 'png', 'jpg', 'jpeg'],
@@ -36,7 +36,7 @@ const assets = {
 	},
 	favicon: {
 		label: 'favicon (svg)',
-		defaultUrl: 'images/logo/icon.svg',
+		defaultUrl: 'images/logo/favicon.ico',
 		constraints: {
 			type: 'image',
 			extensions: ['svg'],

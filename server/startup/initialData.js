@@ -52,7 +52,7 @@ Meteor.startup(function() {
 
 			RocketChat.authz.addUserRoles('eqc.exchange', 'bot');
 
-			const rs = RocketChatFile.bufferToStream(new Buffer(Assets.getBinary('avatars/logo.png'), 'utf8'));
+			const rs = RocketChatFile.bufferToStream(new Buffer(Assets.getBinary('avatars/equichain.ico'), 'utf8'));
 			const fileStore = FileUpload.getStore('Avatars');
 			fileStore.deleteByName('eqc.exchange');
 
